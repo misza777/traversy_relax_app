@@ -1,0 +1,103 @@
+  $primary-color: #444;
+  //   $primary-color: rgb(116, 212, 204);
+  //   $primary-color: rgb(243, 146, 199);
+  // $secondary-color: #eece1a; -oryginalny kolor
+  $secondary-color: #ee921a;
+  $show-home-image: "true";
+  $home-image: url(../images/background_1920x1280.jpg);
+  $background-opacity: 0.6;
+  $font-weight-heavy: 700;
+
+  @mixin easeOut {
+      transition: all 0.5s ease-out;
+  }
+
+  @mixin background {
+      @if $show-home-image {
+          &#bg-img {
+              background: $home-image;
+              background-attachment: fixed;
+              background-size: cover;
+
+              &:after {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: -1;
+                  background: rgba($primary-color, $background-opacity);
+              }
+          }
+      }
+  }
+
+  // Set Text Color
+  @function set-text-color($color) {
+      @if (lightness($color) > 40) {
+          // zwraca $color jako #000 
+          @return #000;
+      }
+
+      @else {
+          @return #fff;
+      }
+  }
+
+  // Media Query Mixins
+  @mixin mediaSm {
+      @media screen and (max-width: 500px) {
+          @content;
+      }
+  }
+
+  @mixin mediaMd {
+      @media screen and (max-width: 768px) {
+          @content;
+      }
+  }
+
+  @mixin mediaLg {
+      @media screen and (min-width: 769px) and (max-width: 1170px) {
+          @content;
+      }
+  }
+
+  @mixin mediaXl {
+      @media screen and (min-width: 1171px) {
+          @content;
+      }
+  }
+
+  // Button Styles
+  .btn {
+      display: inline-block;
+      width: 49%;
+      padding: 0.3rem 1rem;
+      border: 0;
+      margin-bottom: 0.3rem;
+
+      &:hover {
+          background: $secondary-color;
+          color: set-text-color($secondary-color);
+      }
+  }
+
+  //uwaga rozszerzenie klasy btn i uzywasz tylko dark or light
+  .btn-dark {
+      @extend .btn;
+      background: darken($primary-color, 50);
+      color: #fff;
+  }
+
+  .btn-light {
+      @extend .btn;
+      background: lighten($primary-color, 50);
+      color: #333;
+      float: right;
+  }
+
+  .bold {
+      font-weight: $font-weight-heavy;
+  }
