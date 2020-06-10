@@ -1,51 +1,54 @@
-  $primary-color: #444;
-  //   $primary-color: rgb(116, 212, 204);
-  //   $primary-color: rgb(243, 146, 199);
-  // $secondary-color: #eece1a; -oryginalny kolor
-  $secondary-color: #ee921a;
-  $show-home-image: "true";
-  $home-image: url(../images/background_1920x1280.jpg);
-  $background-opacity: 0.6;
-  $font-weight-heavy: 700;
+// $secondary-color: #eece1a; -oryginalny kolor
+//   $secondary-color: #ee921a;
+//   $show-home-image: "true";
+//   $background-opacity: 0.6;
+//   $font-weight-heavy: 700;
 
-  @mixin easeOut {
-      transition: all 0.5s ease-out;
-  }
+$primary-color: #444;
+$home-image: url(../assets/img/bg.jpg);
+$primary-font-size: 1.8rem;
 
-  @mixin background {
-      @if $show-home-image {
-          &#bg-img {
-              background: $home-image;
-              background-attachment: fixed;
-              background-size: cover;
 
-              &:after {
-                  content: '';
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  width: 100%;
-                  height: 100%;
-                  z-index: -1;
-                  background: rgba($primary-color, $background-opacity);
-              }
-          }
-      }
-  }
 
-  // Set Text Color
-  @function set-text-color($color) {
-      @if (lightness($color) > 40) {
-          // zwraca $color jako #000 
-          @return #000;
-      }
 
-      @else {
-          @return #fff;
-      }
-  }
+//   @mixin easeOut {
+//       transition: all 0.5s ease-out;
+//   }
 
-  // Media Query Mixins
+//   @mixin background {
+//       @if $show-home-image {
+//           &#bg-img {
+//               background: $home-image;
+//               background-attachment: fixed;
+//               background-size: cover;
+
+//               &:after {
+//                   content: '';
+//                   position: absolute;
+//                   top: 0;
+//                   right: 0;
+//                   width: 100%;
+//                   height: 100%;
+//                   z-index: -1;
+//                   background: rgba($primary-color, $background-opacity);
+//               }
+//           }
+//       }
+//   }
+
+//   // Set Text Color
+//   @function set-text-color($color) {
+//       @if (lightness($color) > 40) {
+//           // zwraca $color jako #000 
+//           @return #000;
+//       }
+
+//       @else {
+//           @return #fff;
+//       }
+//   }
+
+//   // Media Query Mixins
   @mixin mediaSm {
       @media screen and (max-width: 500px) {
           @content;
@@ -70,34 +73,34 @@
       }
   }
 
-  // Button Styles
-  .btn {
-      display: inline-block;
-      width: 49%;
-      padding: 0.3rem 1rem;
-      border: 0;
-      margin-bottom: 0.3rem;
+//   // Button Styles
+//   .btn {
+//       display: inline-block;
+//       width: 49%;
+//       padding: 0.3rem 1rem;
+//       border: 0;
+//       margin-bottom: 0.3rem;
 
-      &:hover {
-          background: $secondary-color;
-          color: set-text-color($secondary-color);
-      }
-  }
+//       &:hover {
+//           background: $secondary-color;
+//           color: set-text-color($secondary-color);
+//       }
+//   }
 
-  //uwaga rozszerzenie klasy btn i uzywasz tylko dark or light
-  .btn-dark {
-      @extend .btn;
-      background: darken($primary-color, 50);
-      color: #fff;
-  }
+//   //uwaga rozszerzenie klasy btn i uzywasz tylko dark or light
+//   .btn-dark {
+//       @extend .btn;
+//       background: darken($primary-color, 50);
+//       color: #fff;
+//   }
 
-  .btn-light {
-      @extend .btn;
-      background: lighten($primary-color, 50);
-      color: #333;
-      float: right;
-  }
+//   .btn-light {
+//       @extend .btn;
+//       background: lighten($primary-color, 50);
+//       color: #333;
+//       float: right;
+//   }
 
-  .bold {
-      font-weight: $font-weight-heavy;
-  }
+//   .bold {
+//       font-weight: $font-weight-heavy;
+//   }

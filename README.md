@@ -1,19 +1,12 @@
-# Mishiko Webpack Template ver 1
+## Relaxer App
 
-## Instructions
+from https://github.com/bradtraversy/vanillawebprojects
 
-- Clone repo - `git clone https://github.com/https://github.com/misza777/Misza777_Webpack_Template`
-- Install dependencies - `npm install`
-- Start the server - `npm start`
-- Navigate to `localhost:3500` in the browser
-- Enjoy!
+A relaxing breathing app with a visual director to tell you when to breathe in, hold and breathe out
 
-## Content
+## Project Specifications
 
-- Webpack 4
-- ES6 support
-- Sass support
-- Hot Module Reload - browser reloads whenever a js or scss file changes
-- WebpackDevSerwer
-- Reset http://meyerweb.com/eric/tools/css/reset/ v2.0
-- Optional npm normalize.js
+- Create circle and gradient circle with CSS
+- Create and animate pointer (Small circle)
+- Create grow and shrink animations
+- Add JavaScript to create the breath animation effect

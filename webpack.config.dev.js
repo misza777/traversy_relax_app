@@ -84,8 +84,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./app/index.html",
       filename: "index.html",
-      title: "Mishiko portfolio",
-      favicon: "./app/images/favicon-32x32.png",
+      title: "Relaxer App",
+      // favicon: "./app/images/favicon-32x32.png",
     }),
     // new HtmlWebpackPlugin({
     //   template: "./app/about.html",
@@ -96,12 +96,6 @@ module.exports = {
     // new HtmlWebpackPlugin({
     //   template: "./app/work.html",
     //   filename: "work.html",
-    //   favicon: "./app/images/favicon-32x32.png",
-    //   chunks: ["main"],
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: "./app/contact.html",
-    //   filename: "contact.html",
     //   favicon: "./app/images/favicon-32x32.png",
     //   chunks: ["main"],
     // }),

@@ -14,7 +14,7 @@ module.exports = {
   devtool: "source-map",
   entry: {
     main: "./app/js/app.js",
-    vendor: "./app/js/vendor.js",
+    // vendor: "./app/js/vendor.js",
   },
   output: {
     filename: "[name]-bundle-[contenthash:6].js",
@@ -96,7 +96,7 @@ module.exports = {
         keepClosingSlash: true,
         minifyURLs: true,
       },
-      favicon: "./app/images/favicon-32x32.png",
+      // favicon: "./app/images/favicon-32x32.png",
     }),
     // new HtmlWebpackPlugin({
     //   template: "./app/about.html",
